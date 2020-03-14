@@ -1,4 +1,7 @@
 import unittest
+import sys
+sys.path.append('./doubly_linked_list')
+from doubly_linked_list import DoublyLinkedList
 from dll_queue import Queue
 
 
