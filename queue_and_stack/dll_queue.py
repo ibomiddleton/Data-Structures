@@ -1,10 +1,9 @@
 import sys
-sys.path.append('./doubly_linked_list')
+sys.path.append('../doubly_linked_list')
 from doubly_linked_list import DoublyLinkedList
 
-
 class Queue:
-    def __str__(self):
+    def __init__(self):
         self.size = 0
         self.storage = DoublyLinkedList()
 
@@ -15,7 +14,7 @@ class Queue:
         return self.storage.remove_from_head()
 
     def len(self): #returns the number of items in the queue.
-        return self.size
+        return self.storage.length
 
 
 # queue = Queue()
