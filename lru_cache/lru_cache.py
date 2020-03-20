@@ -42,7 +42,7 @@ class LRUCache:
     the newly-specified value.
     """
     def set(self, key, value):
-        
+        #update the node value if node already exists
         if key in self.storage:
             node = self.storage[key]
             node.value = (key, value)
@@ -53,6 +53,7 @@ class LRUCache:
             self.order.remove_from_tail()
             self.size -= 1
         
+        #add the node to storage
         self.order.add_to_head((key, value))
         self.storage[key] = self.order.head
         self.size += 1
